@@ -1,0 +1,53 @@
+
+
+/* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
+ */
+ body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://m.media-amazon.com/images/I/81V2hzNkcsL.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+   
+}
+
+label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
+    font-weight: 600;
+    margin-right: 5px;
+    margin-top: 15px;
+    
+}
+
+input[type=password], input[type=email]{  /* Usado seletor de atributo  para pegar os inputs espeficicos de email e password 
+    e especificado uma largura para os campos */
+    width: 50%;
+}
+
+button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR" 
+    Arredondando a bordas e colocando a maozinha do mouse quando passar em cima */ 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 50%;
+}
+
+button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima dele com o mouse */ 
+    background-color: rgb(173, 177, 173);
+}
+
+#container {  /* usado o seletor #ID  para estilização  da caixa e posicão do formulario atraves do display Flexbox*/
+    display: flex;
+    width: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-form{  /* seletor #id para estilizar o tamanho da caixa do formulario e alinhar os componetes*/ 
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    height: 300px;   
+}

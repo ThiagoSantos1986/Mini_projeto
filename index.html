@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- LINKS  -->
+    <link rel="shortcut icon" href="https://img.freepik.com/vetores-premium/pagina-do-formulario-de-login-do-usuario-3d_169241-6920.jpg?semt=ais_hybrid" type="image/x-icon"> <!-- Add tag link para colocar o favicon ao lado do title-->
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- link para adcionar o arquivo Css externo-->
+
+</head>
+
+<body> 
+    <div id="container"> <!-- criado uma div para como coitaner geral da pag  -->
+        
+        <div id="container-form"> <!-- Cria a div Para centralizar o Formulario usando FlexBox -->
+            
+            <h1>LOGIN</h1> <!--  Tag H1 usada pra criar o titulo "login" na pag -->
+
+            <form action="#" method="post"> <!-- Tag Form para criar um Formulario com os campo inputs e labels-->
+                <!-- as  labels e inputs  foram usadas para os campos de entrada com sua devida identificacao atraves dos labels mostrado o nome da cada campo. 
+                 foi usados os inputs do tipo email e password como entrada do login-->
+                
+                <label for="email"> Email:
+                    <input type="email" name="email" id="email" placeholder="Seu_email@email.com" required>
+                </label><br><br>
+                <label for="password"> Senha:
+                    <input type="password" name="password" id="password" placeholder="********" required>
+                </label><br><br>
+                <input type="checkbox" name="checkbox" id="checkbox"> <!-- tag para criar a caixa do "manter-me conectado"-->
+                <label for="checkbox" class="label-form">Manter-me conectado </label> <!-- label para escrita do checkbox-->
+
+                <button type="submit">Enviar</button>  <!-- Botao de enviar para mandar o formulario de Login-->
+
+
+
+            </form>  <!-- fechando o formulario-->
+        </div>
+    </div>
+</body>
+
+</html>
