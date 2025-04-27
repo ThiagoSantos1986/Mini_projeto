@@ -56,3 +56,14 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     height: 300px; 
     border: 1px solid black;
 }
+
+#label-brasil:hover{
+    color: #af1416;
+}
+#label-castanheira:hover{
+    color: #ac7f3c;
+}
+#label-peroba:hover{
+    color: #fa5894;
+}
+
