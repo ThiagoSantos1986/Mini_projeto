@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-- LINKS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    
     <link rel="shortcut icon" href="https://img.freepik.com/vetores-premium/pagina-do-formulario-de-login-do-usuario-3d_169241-6920.jpg?semt=ais_hybrid" type="image/x-icon"> <!-- Add tag link para colocar o favicon ao lado do title-->
     <link rel="stylesheet" href="/static/css/style.css">  <!-- link para adcionar o arquivo Css externo-->
     <!-- <script src="/static/js/scripts.js"></script> -->
@@ -16,25 +20,26 @@
     <div id="container"> <!-- criado uma div para como coitaner geral da pag  -->
         
         <div id="container-form"> <!-- Cria a div Para centralizar o Formulario usando FlexBox -->
+                <h2 id="welcome"> SEJA BEM VINDO  </h2>
             
             <h1>LOGIN</h1> <!--  Tag H1 usada pra criar o titulo "login" na pag -->
 
-            <form action="#" method="post"> <!-- Tag Form para criar um Formulario com os campo inputs e labels-->
-                <!-- as  labels e inputs  foram usadas para os campos de entrada com sua devida identificacao atraves dos labels mostrado o nome da cada campo. 
-                 foi usados os inputs do tipo email e password como entrada do login-->
+            <form action="#" method="get"  autocomplete="on"> 
                 
-                <label for="email">Email:
-                    <input type="email" name="email" id="email" placeholder="SeuEmail@email.com" required>
-                </label><br><br>
-                <label for="password">Senha:
-                    <input type="password" name="password" id="password" placeholder="*******" required>
-                </label><br><br>
-                <input type="radio" name="perfil" id="pau-brasil" value="Pau-Brasil">
-                <label for="pau-brasil" id="label-brasil">Pau-Brasil</label>
-                <input type="radio" name="perfil" id="castanheira" value="Castanheira">
-                <label for="castanheira" id="label-castanheira">Castanheira</label>
-                <input type="radio" name="perfil" id="peroba-rosa" value="Peroba-Rosa">
-                <label for="peroba-rosa" id="label-peroba">Peroba-Rosa</label>
+                <label for="email">User :</label>
+                    <input type="text" name="user" id="user" placeholder="SeuUsuario"   required>
+                
+                <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" placeholder="*******"  required>
+                
+                <div id="div-radio">
+                    <input type="radio" name="perfil" id="pau-brasil" value="Pau-Brasil" checked>
+                    <label for="pau-brasil" id="label-brasil">Pau-Brasil</label>
+                    <input type="radio" name="perfil" id="castanheira" value="Castanheira">
+                    <label for="castanheira" id="label-castanheira">Castanheira</label>
+                    <input type="radio" name="perfil" id="peroba-rosa" value="Peroba-Rosa">
+                    <label for="peroba-rosa" id="label-peroba">Peroba-Rosa</label>
+                </div>
                 <br>
                 
                 <button type="submit">Enviar</button><br> <!-- Botao de enviar para mandar o formulario de Login-->
@@ -47,7 +52,7 @@
         </div>
     </div>
 
-    <script src="/static/js/scripts.js"></script>
+    <script type="module" src="./static/js/scripts.js"></script>
 </body>
 
 </html>

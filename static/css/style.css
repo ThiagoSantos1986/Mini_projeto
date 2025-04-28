@@ -3,20 +3,33 @@
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
  */
  body{ 
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('https://m.media-amazon.com/images/I/81V2hzNkcsL.jpg');
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('/static/img/Cuidar-do-meio-ambiente.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-family: "Roboto Flex", sans-serif;;
+}
+#back{
    
+    height: 100vh;
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
+    display: inline-flex;
     font-weight: 600;
-    margin-right: 5px;
-    margin-top: 15px;
+    margin: 10px;
+    text-align: center
+    
+}
+#div-radio label{
+    display: inline;
     
 }
 #checkbox{
@@ -24,9 +37,9 @@ label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letr
 
 }
 
-input[type=password], input[type=email]{  /* Usado seletor de atributo  para pegar os inputs espeficicos de email e password 
+input[type=password], input[type=text]{  /* Usado seletor de atributo  para pegar os inputs espeficicos de email e password 
     e especificado uma largura para os campos */
-    width: 50%; 
+    width: 70%; 
 }
 
 button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR" 
@@ -43,18 +56,23 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 
 #container {  /* usado o seletor #ID  para estilização  da caixa e posicão do formulario atraves do display Flexbox*/
     display: flex;
+    flex-direction: row;
     width: auto;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    justify-content:start;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 #container-form{  /* seletor #id para estilizar o tamanho da caixa do formulario e alinhar os componetes*/ 
+    display: flex;
+    flex-direction: column;
+    
     padding: 15px;
     text-align: center;
-    width: auto;
+    width: 450px;
     height: 300px; 
-    border: 1px solid black;
+    
 }
 
 #label-brasil:hover{
