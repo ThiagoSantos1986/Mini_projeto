@@ -3,6 +3,7 @@
 
 const reset =  document.getElementById('reset')
 const backgroud = document.getElementById('back')
+const logout = document.getElementById('logout')
 
 function perfil(){
     
@@ -33,18 +34,17 @@ function perfil(){
 
 perfil()
 
-// reset.addEventListener('click', () => {
+logout.addEventListener('click', () => {
     
-//     setTimeout(() => {
+    setTimeout(() => {
 
-//         localStorage.clear()
+        localStorage.clear()
 
-//         window.location.href = '/index.html' 
+        window.location.href = '/index.html' 
 
-//     }, 2000)
+    }, 2000)
     
-
-// })
+})
 
 
 

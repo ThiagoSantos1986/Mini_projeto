@@ -63,3 +63,6 @@ for (const key in newObjeto) {
 // Requiring fs module in which
 // writeFile function is defined.
 
+let soma = (a,b) => a + b;
+
+soma(2,3)

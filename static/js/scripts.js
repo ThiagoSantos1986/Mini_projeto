@@ -1,6 +1,10 @@
 
 
 const input_user = document.getElementById('user')
+const input_checkbox =  document.getElementById('checkbox')
+input_checkbox.checked  = true
+const isChecked = input_checkbox.checked 
+
 
 
 document.addEventListener('submit', (e)=>{
@@ -9,12 +13,11 @@ document.addEventListener('submit', (e)=>{
     const selectedRadio = document.querySelector("input[name='perfil']:checked").value
     
     const input_senha = document.getElementById('password').value
-    const input_checkbox = document.getElementById('checkbox')
-    const isChecked = input_checkbox.checked
+    
 
     const loginUser = {user: input_user.value, pass: input_senha, perfil: selectedRadio}
     
-    // const stringJson = JSON.stringify(loginUser)// string pronta pra salvar no banco de dados
+    const stringJson = JSON.stringify(loginUser) // string pronta pra salvar no banco de dados
     
     if (isChecked) {
 
@@ -24,51 +27,50 @@ document.addEventListener('submit', (e)=>{
 
                 localStorage.setItem(key, loginUser[key]);
             }
+            setLogin()
+
+        }
+        else{
+            
+            const validPass = localStorage.getItem('pass')
+
+            if(validatePass(input_senha, validPass)){
+                
+                setLogin()
+
+            }else{
+
+                alert('senha informada invalida!!')
+            }
+                
         }
     }
     
-        
+
+})
+
+
+function setLogin(){
     setTimeout(()=> {
         
         window.location.href = '/templates/pages.html' 
 
     }, 2000)
-            
- 
-})
+}
 
 
-
-function set_perfil(loginUser){
-
-
-
-    switch (localStorage.getItem('perfil') || loginUser['perfil']){
-
-        case 'Pau-Brasil':
-            console.log('pagina Pau-Brasil')
-            window.location.href = '/templates/peroba-rosa.html'
-            break
-
-        case 'Castanheira':
-            console.log('pagina Castanheira')
-            window.location.href = '/templates/peroba-rosa.html'
-
-            break
-        case 'Peroba-Rosa':
-            console.log('pagina peroba')
-            // perfil()
-            window.location.href = '/templates/peroba-rosa.html'
-            break
-    }
-
-}   
+function validatePass(senhaDigitada, senhaBD){
+    
+    return  senhaDigitada === senhaBD ? true : false
+         
+}
 
 
 window.onload = function() {
     
+
     if(localStorage.user){
-        console.log("aqui")
+        
         const user = localStorage.getItem('user')
         setTimeout(()=>{
             input_user.value = user

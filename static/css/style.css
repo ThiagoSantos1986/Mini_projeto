@@ -1,9 +1,10 @@
 :root{
-    --primary-color: #fff;
+    --primary-color: #ffffff;
     --background-PauBrasil: url('/static/img/confetti-doodles-pau-Brasil.svg');
     --background-Castanheira: url('/static/img/confetti-doodles-castanha.svg');
     --background-Peroba-rosa: url('/static/img/confetti-doodles-peroba.svg');
     --second-color: #000;
+    --color-menu-defalt:#65a675;
 }
 
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
@@ -18,9 +19,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--primary-color);
+}
+h1{
+    margin-bottom: 0;
 }
 h2{
-    font-family: "Roboto Flex", sans-serif;;
+    font-family: "Roboto Flex", sans-serif;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    color:#44372f; 
+    font-size: 32px; 
 }
 #back{
     /* background:  linear-gradient(to bottom right, #c957d1 0%, #cc6699 100%); */
@@ -29,44 +38,53 @@ h2{
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
-    display: inline-flex;
+    display: block;
     font-weight: 600;
-    margin: 10px;
-    text-align: center
+    margin: 5px 0 5px;
+    text-align: left;
+    color: var(--second-color);
     
 }
 #div-radio label{
     display: inline;
+    letter-spacing: 0.5px;
     
 }
 #checkbox{
     margin-top: 10px;
-
+    
 }
-
+.label-form{
+    text-align: center;
+}
 input[type=password], input[type=text]{  /* Usado seletor de atributo  para pegar os inputs espeficicos de email e password 
     e especificado uma largura para os campos */
-    width: 70%; 
+    width: 100%; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 }
 
 button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR" 
     Arredondando a bordas e colocando a maozinha do mouse quando passar em cima */ 
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 15px;
-    width: 50%;
+    margin-top: 30px;
+    width: 90%;
+    padding: 10px;
+    font-weight: 700;
 }
 
 button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima dele com o mouse */ 
-    background-color: rgb(173, 177, 173);
+    background-color: rgba(87, 243, 87, 0.5);
 }
 
 #container {  /* usado o seletor #ID  para estilização  da caixa e posicão do formulario atraves do display Flexbox*/
-   /* max-width: 90%; */
+    max-width: 90%;
     margin: 0 auto;
     height: 100vh;
     
-    /* align-items: flex-start; */
 }
 
 #container-form{  /* seletor #id para estilizar o tamanho da caixa do formulario e alinhar os componetes*/ 
@@ -74,7 +92,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     flex-direction: column;
     padding: 15px;
     text-align: center;
-    width: 450px;
+    width: 350px;
     height: 300px; 
     
 }
@@ -92,33 +110,54 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 #menu-content{
     display: flex;
     flex-direction: row;
-    /* justify-content:space-between; */
+    justify-content:space-between;
     width: 100%;
-    border: 1px solid black;
-    background-color: aliceblue;
+    background-color: var(--color-menu-defalt);
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 #logo{
-    width: 30%;
+    width: 20%;
     align-self: center;
     text-align: center;
-   
+    margin: 0;
+    
+}
+
+#logo a{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+
 }
 
 #menu-content ul{
-    width: 70%;
+    width: 60%;
     display: flex;
-    justify-content: end;
-    padding: 10px;
-    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
-#menu-content ul li{
+#menu-content ul li {
     list-style: none;
-    margin-right: 40px;
-    
-    
+    display: block;
+    padding: 20px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
-#menu-content ul li:hover{
+#menu-content ul li:hover {
     background-color: #4948483f;
+    transform: scale(1.05); 
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:var(--primary-color);  
 }
