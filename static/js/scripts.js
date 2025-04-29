@@ -2,6 +2,7 @@
 
 const input_user = document.getElementById('user')
 
+
 document.addEventListener('submit', (e)=>{
     e.preventDefault()
     
@@ -13,7 +14,7 @@ document.addEventListener('submit', (e)=>{
 
     const loginUser = {user: input_user.value, pass: input_senha, perfil: selectedRadio}
     
-    const stringJson = JSON.stringify(loginUser)// string pronta pra salvar no banco de dados
+    // const stringJson = JSON.stringify(loginUser)// string pronta pra salvar no banco de dados
     
     if (isChecked) {
 
@@ -26,64 +27,54 @@ document.addEventListener('submit', (e)=>{
         }
     }
     
-    get_perfil(loginUser)
+        
+    setTimeout(()=> {
+        
+        window.location.href = '/templates/pages.html' 
+
+    }, 2000)
+            
  
 })
 
-// const myttimeout = setTimeout(setUser, 1000)
 
-// function setUser(){
-//     if(localStorage.getItem('user')){
-//         console.log("aqui")
-//         const user = localStorage.getItem('user')
-//         input_user.value = user
 
-//     }
-// }
-import { perfil } from "./peroba.js"
+function set_perfil(loginUser){
 
-function get_perfil(loginUser){
+
 
     switch (localStorage.getItem('perfil') || loginUser['perfil']){
 
         case 'Pau-Brasil':
             console.log('pagina Pau-Brasil')
-
+            window.location.href = '/templates/peroba-rosa.html'
             break
 
         case 'Castanheira':
             console.log('pagina Castanheira')
+            window.location.href = '/templates/peroba-rosa.html'
 
             break
         case 'Peroba-Rosa':
             console.log('pagina peroba')
-            
+            // perfil()
             window.location.href = '/templates/peroba-rosa.html'
-
-
             break
     }
 
 }   
+
+
+window.onload = function() {
+    
+    if(localStorage.user){
+        console.log("aqui")
+        const user = localStorage.getItem('user')
+        setTimeout(()=>{
+            input_user.value = user
+        }, 2000)
+        return
+    }
+    return
+  };
         
-        
-
-        
-        
-        
-    //     const user = localStorage.getItem('user')
-        
-    //     let texto = document.getElementById('welcome')
-        
-    //     texto.style.color = '#b3cc57'
-    //     texto.innerText = texto.textContent + user
-
-    //     input_user.value = user
-
-    // }
-
-
-
-
-
-// clearTimeout(myttimeout)
