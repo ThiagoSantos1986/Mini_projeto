@@ -2,9 +2,11 @@
     --primary-color: #ffffff;
     --background-PauBrasil: url('/static/img/confetti-doodles-pau-Brasil.svg');
     --background-Castanheira: url('/static/img/confetti-doodles-castanha.svg');
-    --background-Peroba-rosa: url('/static/img/confetti-doodles-peroba.svg');
+    --background-Peroba-rosa: url('/static/img/confetti-doodles-peroba.svg');   
     --second-color: #000;
     --color-menu-defalt:#65a675;
+    --color-castanha: #3b0503;
+    --color-peroba-rosa:#ec225e;
 }
 
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
@@ -30,11 +32,12 @@ h2{
     letter-spacing: 5px;
     color:#44372f; 
     font-size: 32px; 
+    z-index: 3;
 }
 #back{
     /* background:  linear-gradient(to bottom right, #c957d1 0%, #cc6699 100%); */
-    background:  var(--background-PauBrasil);
-    height: 100vh; 
+    background-image:  var(--background-PauBrasil);
+    height: auto; 
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
@@ -84,6 +87,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     max-width: 90%;
     margin: 0 auto;
     height: 100vh;
+    /* position: relative; */
     
 }
 
@@ -97,16 +101,6 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     
 }
 
-/* #label-brasil:hover{
-    color: #af1416;
-}
-#label-castanheira:hover{
-    color: #ac7f3c;
-}
-#label-peroba:hover{
-    color: #fa5894;
-} */
-
 #menu-content{
     display: flex;
     flex-direction: row;
@@ -117,6 +111,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 #logo{
     width: 20%;
@@ -137,10 +132,11 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 #menu-content ul{
     width: 60%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
+    
 }
 #menu-content ul li {
     list-style: none;
@@ -157,7 +153,42 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 a {
     font-weight: 600;
     text-decoration: none;
+    letter-spacing: 0.6px;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:var(--primary-color);  
+    color: red 
 }
+
+
+
+
+.demo_wrap img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    z-index: -2;
+}
+
+#form-cadastro{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 40%;
+    right: auto;
+    z-index: 1;
+   
+} 
+
+/*demo_wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    height: 100vh;
+} */

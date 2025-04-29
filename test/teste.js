@@ -4,22 +4,34 @@
 const loginUser = {user: 'input_email', pass: 'input_senha', perfil: 'selectedRadio '}
 
 const stringJson = JSON.stringify(loginUser)
+console.log(stringJson)
+console.log(/test/bd.json)
 
 const newObjeto = JSON.parse(stringJson)
 
-console.log(typeof(newObjeto))
+// console.log(newObjeto)
+
+// fetch("\\test\\bd.json")
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data); // Imprime o objeto JavaScript
+//     // ... Acessar e manipular os dados
+//   })
+//   .catch(error => {
+//     console.error("Erro ao ler o arquivo JSON:", error);
+//   });
 
 
 // const objeto = JSON.parse(loginUser)
 
-for (const key in newObjeto) {
+// for (const key in newObjeto) {
 
-    if (Object.prototype.hasOwnProperty.call(newObjeto, key)) {
-        const element = newObjeto['perfil'];
+//     if (Object.prototype.hasOwnProperty.call(newObjeto, key)) {
+//         const element = newObjeto['perfil'];
 
-        console.log(element)
-    }
-}
+//         console.log(element)
+//     }
+// }
 
 // const { text } = require('stream/consumers');
 
@@ -66,3 +78,5 @@ for (const key in newObjeto) {
 let soma = (a,b) => a + b;
 
 soma(2,3)
+
+

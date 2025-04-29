@@ -24,10 +24,9 @@ function perfil(){
             break
             
         default:
-
             console.log('pagina Pau-Brasil')
             backgroud.style.background = 'var(--background-PauBrasil)'
-            break
+            
     }
 
 }
