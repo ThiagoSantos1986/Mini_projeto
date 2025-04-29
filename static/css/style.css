@@ -7,12 +7,12 @@
     --color-menu-defalt:#65a675;
     --color-castanha: #3b0503;
     --color-peroba-rosa:#ec225e;
+    --color-pau-brasil:#ae0c3e;
 }
-
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
  */
  body{ 
-    font-family: 'Times New Roman', Times, serif;
+    
     background-image: url('/static/img/Cuidar-do-meio-ambiente.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -21,10 +21,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--primary-color);
+    color: var(--color-pau-brasil);
 }
 h1{
     margin-bottom: 0;
+    color: var(--second-color);
 }
 h2{
     font-family: "Roboto Flex", sans-serif;
@@ -32,7 +33,7 @@ h2{
     letter-spacing: 5px;
     color:#44372f; 
     font-size: 32px; 
-    z-index: 3;
+    z-index: 2;
 }
 #back{
     /* background:  linear-gradient(to bottom right, #c957d1 0%, #cc6699 100%); */
@@ -87,7 +88,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     max-width: 90%;
     margin: 0 auto;
     height: 100vh;
-    /* position: relative; */
+    position: static;
     
 }
 
@@ -150,17 +151,14 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     transform: scale(1.05); 
 }
 
-a {
+.color-user {
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.6px;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: red 
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
 }
-
-
-
 
 .demo_wrap img {
     position: absolute;
@@ -169,26 +167,53 @@ a {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     opacity: 0.3;
-    z-index: -2;
+    /* z-index: -1; */
 }
 
 #form-cadastro{
+    padding: 15px;
+    width: 400px;
     display: flex;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 40%;
-    right: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
     z-index: 1;
-   
+
+}
+
+#form-cadastro button{
+    display: inline;
+    width: 45%;
+    margin: 5px;
+    border: none;
+
+}
+#add:hover{
+    background-color: rgb(122, 180, 235);
+}
+#form-cadastro label{  
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+#form-cadastro input{
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    align-self: flex-start;
+    align-self: center; 
 } 
 
-/*demo_wrap {
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    height: 100vh;
-} */
+#div-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
