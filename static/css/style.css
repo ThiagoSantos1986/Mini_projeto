@@ -37,7 +37,6 @@ h2{
 }
 
 #back{
-    /* background:  linear-gradient(to bottom right, #c957d1 0%, #cc6699 100%); */
     background-image:  var(--background-PauBrasil);
     height: auto; 
 }
