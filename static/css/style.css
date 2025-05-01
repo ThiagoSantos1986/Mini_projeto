@@ -1,13 +1,16 @@
+/*url('/static/img/confetti-doodles-peroba.svg');*/   
+
+
 :root{
     --primary-color: #ffffff;
-    --background-PauBrasil: url('/static/img/confetti-doodles-pau-Brasil.svg');
-    --background-Castanheira: url('/static/img/confetti-doodles-castanha.svg');
-    --background-Peroba-rosa: url('/static/img/confetti-doodles-peroba.svg');   
-    --second-color: #000;
-    --color-menu-defalt:#65a675;
-    --color-castanha: #3b0503;
+    --background-PauBrasil: url('/static/img/pau-brasil1.jpg');
+    --background-Castanheira: url('/static/img/american-elm.jpg');
+    --background-Peroba-rosa: url('/static/img/pink-trees-tg7is0i5q68izq9m.jpg');
+    --second-color: #000 ;
+    --color-menu-defalt:#71c285;
+    --color-castanha: #907c45;
     --color-peroba-rosa:#ec225e;
-    --color-pau-brasil:#990909;
+    --color-pau-brasil:#c41f1f;
 }
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
  */
@@ -21,7 +24,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--color-pau-brasil);
+    color: var(--second-color);
+    
 }
 h1{
     margin-bottom: 0;
@@ -37,8 +41,14 @@ h2{
 }
 
 #back{
-    background-image:  var(--background-PauBrasil);
+    /* background-image: var(--background-PauBrasil); */
     height: auto; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* opacity: ; */
+    z-index: -1;
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
@@ -74,14 +84,16 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     Arredondando a bordas e colocando a maozinha do mouse quando passar em cima */ 
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 30px;
-    width: 90%;
     padding: 10px;
     font-weight: 700;
 }
+#btn-index{
+    margin-top: 30px;
+    width: 90%;
+}
 
 button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima dele com o mouse */ 
-    background-color: rgba(87, 243, 87, 0.5);
+    background-color: rgba(10, 59, 10, 0.925);
 }
 
 #container {  /* usado o seletor #ID  para estilização  da caixa e posicão do formulario atraves do display Flexbox*/
@@ -142,7 +154,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 #menu-content ul li {
     list-style: none;
     display: block;
-    padding: 20px 15px;
+    padding: 25px 15px;
     transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
@@ -160,20 +172,8 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     color: inherit;
 }
 
-.demo_wrap img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 0.3;
-    
-}
-
 #form-cadastro{
-    /* margin-top: 70px; */
+    margin-top: 60px;
     padding: 15px;
     width: 400px;
     display: flex;
@@ -182,6 +182,9 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     height: auto;
     z-index: 1;
     color: var(--second-color);
+    border: 1px solid black;
+    background-color: #85837fbd;
+    border-radius: 8px;
 
 }
 
@@ -198,7 +201,12 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 #form-cadastro label{  
     text-align: center;
     margin-bottom: 10px;
-    font-size: 20px;  
+    font-size: 25px;  
+    font-weight: bold; 
+    letter-spacing: 0.3;
+    color: #0c0b0b;
+   
+    
 }
 
 #form-cadastro input{
@@ -207,7 +215,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     margin-bottom: 15px;
     border-radius: 10px;
     border: none;
-    align-self: center;
+    align-self: center;    
 } 
 
 #div-form{   
@@ -216,6 +224,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #div-table{
@@ -228,9 +237,9 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     
 }
 table {
-    display: none;
+    /* display: none; */
     border-collapse: collapse;
-    width: 90%; 
+    width: 100%; 
   }
   
   th, td {
@@ -246,3 +255,48 @@ tr:hover {
  th:nth-child(even),th:nth-child(odd) {
     background-color: rgba(61, 153, 88, 0.822);
   }
+
+#div-relatorio{
+   display: flex;
+   justify-content: center;
+   align-items: center  ;
+   height: 100vh;
+   flex-direction: column;
+  
+}
+
+#box-itens{
+    display: flex;
+    width:  300px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #85837fbd;
+    border-radius: 8px;
+}
+
+#box-itens label input{
+    align-self: center;
+    border: none;
+    padding: 10px;
+    width: 80%;
+    margin: 0;  
+    border-radius: 8px;
+    
+}
+#box-itens button{
+    align-self: center;
+    width: 90%;
+    margin: 15px;
+    
+}
+#box-itens  label{
+    align-self: center;
+    text-align: center; 
+    font-size: 20px;
+    margin: 4px;
+    border: none;
+
+} 

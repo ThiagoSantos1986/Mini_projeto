@@ -19,22 +19,11 @@ add.addEventListener('click', () => {
     }
     document.getElementById('table').style.display = 'table'
     
-    function createTable() {
-        
-        const table = document.getElementById("table");
-        const row = table.insertRow(1);
-        const user = row.insertCell(0);
-        const especie = row.insertCell(1);
-        const quantidade = row.insertCell(2);
-        user.innerHTML = localStorage.getItem('user')
-        especie.innerHTML = option.value
-        quantidade.innerHTML = input_quantidade.value
-      }
     
     createTable()
     
     const objeto = {user: localStorage.getItem('user') , especie: option.value , quantidade: input_quantidade.value }
-    
+    console.log(objeto)
     const stringJson = JSON.stringify(objeto)
    
     registerReflorestamento.push(stringJson)
@@ -43,6 +32,17 @@ add.addEventListener('click', () => {
     input_quantidade.value = ''
     
 });
+function createTable() {
+        
+    const table = document.getElementById("table");
+    const row = table.insertRow(1);
+    const user = row.insertCell(0);
+    const especie = row.insertCell(1);
+    const quantidade = row.insertCell(2);
+    user.innerHTML = localStorage.getItem('user')
+    especie.innerHTML = option.value
+    quantidade.innerHTML = input_quantidade.value
+}
 
 btnSubmit.addEventListener('submit', (e) => {
     

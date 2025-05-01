@@ -9,9 +9,9 @@
 </head>
 <body id="back">
     <div id="container">
-        <div class="demo_wrap">
+        <!-- <div class="demo_wrap">
             <img src="/static/img/Cuidar-do-meio-ambiente.jpg">
-        </div>  
+        </div>   -->
     
         <header>
             <nav id="menu-content">
@@ -28,6 +28,39 @@
                 
             </nav>
         </header>
+
+        <div id="div-relatorio">
+            <h2 style="color: black;">BUSCAR RELATORIOS</h2>
+            <div  id="box-itens">
+            
+            
+            <label for="user">User:
+                <input type="text" id="user">
+            </label>
+            
+            <label for="Especie">Especie:
+                <input list="especies" name="especie" id="especie" >
+            </label>
+                    <datalist id="especies">
+                     <option value="Ipês" selected>
+                        <option value="Angicos">
+                            <option value="Aroeiras">
+                                <option value="Jequitibás">
+                                    <option value="Peroba do Campo">
+                                    </datalist>
+            
+            <button type="button" id="search">Pesquisar</button>
+            </div>
+
+            <div id="div-table">
+                <table id="table">
+                    <tr>
+                      <th>USER</th>
+                      <th>ESPECIE</th>
+                      <th>QUANTIDADE</th>
+                    </tr>
+            </div>
+        </div>
                
 
     </div>
