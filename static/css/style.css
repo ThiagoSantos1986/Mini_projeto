@@ -237,9 +237,10 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     
 }
 table {
-    /* display: none; */
+    display: none;
     border-collapse: collapse;
     width: 100%; 
+    font-size: 18px;
   }
   
   th, td {
@@ -248,11 +249,16 @@ table {
     border-bottom: 1px solid #141414;
   }
 
-tr:hover {
+tr:nth-child(even):hover , tr:nth-child(odd):hover {
     background-color: #D6EEEE;
 }
 
- th:nth-child(even),th:nth-child(odd) {
+tr:nth-child(even), tr:nth-child(odd){
+    background-color: #7d919167;
+  }
+
+
+ th:nth-child(even), th:nth-child(odd) {
     background-color: rgba(61, 153, 88, 0.822);
   }
 
