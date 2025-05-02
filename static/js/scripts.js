@@ -27,7 +27,7 @@ document.addEventListener('submit', (e)=>{
 
                 localStorage.setItem(key, loginUser[key]);
             }
-            setLogin()
+            setLogin(stringJson)
 
         }
         else{
@@ -50,7 +50,10 @@ document.addEventListener('submit', (e)=>{
 })
 
 
-function setLogin(){
+function setLogin(user){
+
+    console.info(user, "Usuario salvo no banco de Dados")
+
     setTimeout(()=> {
         
         window.location.href = '/templates/pages.html' 
