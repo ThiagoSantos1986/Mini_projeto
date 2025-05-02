@@ -4,6 +4,8 @@
 
 
 import { perfil } from './pages.js';
+import { listAvatar } from './perfil.js';
+
 
 perfil()
 
@@ -14,10 +16,9 @@ const imagesBox = document.getElementsByClassName('img-item')
 const nomeDestaque = document.getElementsByClassName('nome-destaque')
 
 
-
 const listObjeto = [
 
-    {user: 'PEDRO', especie: 'Ipês', quantidade: 100 },
+    {user: 'PEDRO', especie: 'Ipês', quantidade: 1 },
     {user: 'ANA', especie: 'Angicos', quantidade: 300 },
     {user: 'ANA', especie: 'Peroba do Campo', quantidade: 700 },
     {user: 'THIAGO', especie: 'Ipês', quantidade: 50 },
@@ -25,17 +26,17 @@ const listObjeto = [
     {user: 'ANA', especie: 'Jequitibás', quantidade: 60 },
     {user: 'ANA', especie: 'Ipês', quantidade: 600 },
     {user: 'THIAGO', especie: 'Peroba do Campo', quantidade: 20 },
-    {user: 'RAFAEL', especie: 'Ipês', quantidade: 10 },
+    {user: 'RAFAEL', especie: 'Ipês', quantidade: 100 },
     {user: 'RAFAEL', especie: 'Angicos', quantidade: 50 },
-    {user: 'PEDRO', especie: 'Angicos', quantidade: 420 },
+    {user: 'PEDRO', especie: 'Angicos', quantidade: 42 },
     {user: 'PEDRO', especie: 'Aroeiras', quantidade: 60 },
-    {user: 'PEDRO', especie: 'Peroba do Campo', quantidade: 200 },
+    {user: 'PEDRO', especie: 'Peroba do Campo', quantidade: 20 },
     {user: 'ANA', especie: 'Aroeiras', quantidade: 410 },
-    {user: 'THIAGO', especie: 'Jequitibás', quantidade: 110 },
+    {user: 'THIAGO', especie: 'Jequitibás', quantidade: 10 },
     {user: 'RAFAEL', especie: 'Peroba do Campo', quantidade: 300 },
     {user: 'THIAGO', especie: 'Aroeiras', quantidade: 90 },
-    {user: 'PEDRO', especie: 'Jequitibás', quantidade: 150 },
-    {user: 'RAFAEL', especie: 'Aroeiras', quantidade: 30 },
+    {user: 'PEDRO', especie: 'Jequitibás', quantidade: 15 },
+    {user: 'RAFAEL', especie: 'Aroeiras', quantidade: 300 },
     {user: 'RAFAEL', especie: 'Jequitibás', quantidade: 10 },
 ]
 
@@ -56,6 +57,7 @@ for (const element of listObjeto) {
     nomes.push(element.user)
     
 }
+
 
 const nomeUnicos = new Set(nomes)
 
@@ -81,7 +83,6 @@ console.log(listaNomesQuantidadeTotal)
 
 
 //for para pegar somente os tres primeiros e setar no front-end
-
 for(let i = 0 ; i <= nomeDestaque.length -1 ; i++){
 
     // FAZ UM FILTRO BUSCANDO O NOME COMPLETO NO OBEJETO LISTUSER
@@ -91,10 +92,59 @@ for(let i = 0 ; i <= nomeDestaque.length -1 ; i++){
         
         const nomeCompleto = element.user
        
-        nomeDestaque[i].textContent = nomeCompleto
-        imagesBox[i].setAttribute('src', "\\static\\img\\Reflorestamento.jpg")
-
+        nomeDestaque[i].textContent = nomeCompleto   
     }
+    let total = listaNomesQuantidadeTotal[i].total
     
+    if(total > 1500){
+
+        let result = listAvatar.filter((nome) => nome.avatar === "madura")
+        
+        imagesBox[i].setAttribute('src', result[0].path )
+    }else if (total < 1500 && total > 700){
+    
+        let result = listAvatar.filter((nome) => nome.avatar === "jovem")
+        imagesBox[i].setAttribute('src', result[0].path )
+
+    }else if (total <= 700 && total > 300){
+    
+        let result = listAvatar.filter((nome) => nome.avatar === "broto")
+        imagesBox[i].setAttribute('src', result[0].path )
+
+    }else{
+
+        let result = listAvatar.filter((nome) => nome.avatar === "plantada")
+        imagesBox[i].setAttribute('src', result[0].path )
+    }
+}
+
+//aqui percorre e busca pela quantidade  de arvores plantadas  depois busca no objeto 
+// importado o endereco da imagem e conforme a valor total ele insere a imagem correspondente (madura, jovem, broto, plantada)
+for(let i = 0 ; i<= 2; i++){
+
+    let total = listaNomesQuantidadeTotal[i].total
+    
+    if(total > 1500){
+
+        let result = listAvatar.filter((nome) => nome.avatar === "madura")
+        
+        imagesBox[i].setAttribute('src', result[0].path )
+    }else if (total < 1500 && total > 700){
+    
+        let result = listAvatar.filter((nome) => nome.avatar === "jovem")
+        imagesBox[i].setAttribute('src', result[0].path )
+
+    }else if (total <= 700 && total > 300){
+    
+        let result = listAvatar.filter((nome) => nome.avatar === "broto")
+        imagesBox[i].setAttribute('src', result[0].path )
+        document.getElementById('avatar').innerText = result[0].avatar
+
+    }else{
+
+        let result = listAvatar.filter((nome) => nome.avatar === "plantada")
+        imagesBox[i].setAttribute('src', result[0].path )
+        // document.getElementById('avatar').textContent = result[0].avatar  //se quiser colocar qual avatar esta.
+    }
 }
 

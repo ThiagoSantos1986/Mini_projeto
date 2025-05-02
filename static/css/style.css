@@ -15,18 +15,12 @@
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
  */
  body{
-    height: 100vh;
-    background-image: url('/static/img/Cuidar-do-meio-ambiente.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--second-color);
-    
+    color: var(--second-color);   
 }
+
 h1{
     margin-bottom: 0;
     color: var(--second-color);
@@ -39,16 +33,25 @@ h2{
     font-size: 32px;    
    
 }
+#index{
+    background-image: url('/static/img/Cuidar-do-meio-ambiente.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 
 #back{
-    /* background-image: var(--background-PauBrasil); */
-    height: auto; 
+    /* background-image: url('/static/img/Cuidar-do-meio-ambiente.jpg'); */
+    height: 100vh;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     /* opacity: ; */
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
@@ -119,7 +122,7 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
     flex-direction: row;
     justify-content:space-between;
     width: 100%;
-    background-color: var(--color-menu-defalt);
+    /* background-color: var(--color-menu-defalt); */
     position: fixed;
     top: 0;
     left: 0;
@@ -175,6 +178,8 @@ button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima
 a[href^="#log"]:hover{
     color: tomato;
 }
+/*------------------------------------------------------------------------*/
+/*----------------- CSS PAG CADASTRO --------------------------------*/
 
 #form-cadastro{
     margin-top: 60px;
@@ -229,6 +234,8 @@ a[href^="#log"]:hover{
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
+/*------------------------------------------------------------------------*/
+/*----------------- CSS TABELA CADASTRO -------------------------------------*/
 
 #div-table{
     width: 70%;
@@ -264,6 +271,8 @@ tr:nth-child(even), tr:nth-child(odd){
  th:nth-child(even), th:nth-child(odd) {
     background-color: rgba(61, 153, 88, 0.822);
   }
+/*------------------------------------------------------------------------*/
+/*----------------- CSS PAG RELATORIOS -------------------------------------*/
 
 #div-relatorio{
    display: flex;
@@ -350,6 +359,7 @@ tr:nth-child(even), tr:nth-child(odd){
     width: 200px;
     height: 180px;
     border-radius: 15px;
+    background-size: cover;
 }
 
 .destaque-itens h3{
