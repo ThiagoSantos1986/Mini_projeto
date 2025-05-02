@@ -44,30 +44,16 @@ function createTable() {
     quantidade.innerHTML = input_quantidade.value
 }
 
-btnSubmit.addEventListener('submit', (e) => {
+btnSubmit.addEventListener('submit', (e)=>{
     
     e.preventDefault()
-
-    alert('deseja salvar os dados')
 
     option.value = ''
     input_quantidade.value = ''
 
     document.getElementById('table').style.display = 'none'
 
-    
-
-    salvarDados()
 
 })
 
 
-function salvarDados(){
-   
-    setTimeout(() => {
-
-        window.location.href = '/templates/pages.html' 
-
-    }, 3000)   
-    
-}

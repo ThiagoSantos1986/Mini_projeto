@@ -348,16 +348,19 @@ tr:nth-child(even), tr:nth-child(odd){
 }
 .destaque-itens img{
     width: 200px;
+    height: 180px;
     border-radius: 15px;
 }
 
 .destaque-itens h3{
+    
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    width: 100%;
 }
 
-.destaque-itens:nth-child(2){
+/* .destaque-itens:nth-child(2){
     align-self: flex-start;
-}
+} */
