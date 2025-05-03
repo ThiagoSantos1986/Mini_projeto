@@ -404,6 +404,7 @@ tr:nth-child(even), tr:nth-child(odd){
 
 #perfil{
     width: 200px;
+    height: 180px;
     border-radius: 50px;
 }
 
@@ -420,6 +421,7 @@ tr:nth-child(even), tr:nth-child(odd){
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
+    font-size: 16px;
 }
 
 #btn-perfil{

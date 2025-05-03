@@ -57,28 +57,7 @@ for(let i = 0 ; i <= nomeDestaque.length -1 ; i++){
        
         nomeDestaque[i].textContent = nomeCompleto   
     }
-    let total = listaNomesQuantidadeTotal[i].total
     
-    if(total > 1500){
-
-        let result = listAvatar.filter((nome) => nome.avatar === "madura")
-        
-        imagesBox[i].setAttribute('src', result[0].path )
-    }else if (total < 1500 && total > 700){
-    
-        let result = listAvatar.filter((nome) => nome.avatar === "jovem")
-        imagesBox[i].setAttribute('src', result[0].path )
-
-    }else if (total <= 700 && total > 300){
-    
-        let result = listAvatar.filter((nome) => nome.avatar === "broto")
-        imagesBox[i].setAttribute('src', result[0].path )
-
-    }else{
-
-        let result = listAvatar.filter((nome) => nome.avatar === "plantada")
-        imagesBox[i].setAttribute('src', result[0].path )
-    }
 }
 
 //aqui percorre e busca pela quantidade  de arvores plantadas  depois busca no objeto 
