@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo Reflorestador</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body id="back">
+    
+    <div id="container">
+        
+        <header>
+            <nav id="menu-content">
+                
+                <h1 id="logo"><a id="link-logo" class="color-user" href="/templates/pages.html">LOGO</a></h1>
+               
+                <ul>
+                    <li><a class="color-user" href="/templates/cadastro.html">Cadastro Reflorestamento</a></li>
+                    <li><a class="color-user" href="/templates/relatorios.html">Relatorios</a></li>
+                    <li><a class="color-user" href="/templates/destaques.html">Destaques</a></li>
+                    <li><a class="color-user" href="#">Perfil</a></li>
+                    <li><a class="color-user"  id="logout"  href="#log">Logout</a></li> 
+                </ul>
+               
+            </nav>
+        </header>
+        <div id="content-perfil">
+            <h2>PERFIL DO REFLORESTADOR</h2>
+            <div id="form-perfil">
+            
+                    <div class="perfil-item" >
+                        <img src="/static/img/Reflorestamento.jpg" alt="imagem avatar" id="perfil">
+                        <div id="label-perfil">
+                            <strong><p id="nome-perfil">THIAGO</p></strong>
+                            <label >Participação: 
+                                <span id="quantidade">30 <i>Árvores Plantadas</i></span>
+                            </label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="perfil-item" >
+                        <label>BIO:
+                        </label>
+                        <textarea name="bio" id="bio-edit" cols="40" rows="10" disabled>
+                            
+                        </textarea>
+                        <div id="btn-perfil">
+                            <button id="btn-edit">EDITAR</button>
+                            <button id="btn-salvar"  disabled>SALVAR</button>
+                        </div>
+                    </div>
+            </div>    
+        </div>
+               
+
+    </div>
+<script type="module"  src="/static/js/perfil.js"></script>
+</body>
+</html>
+
+
+<!-- <pre id="pre-perfil">
+    Reflorestamento e restauração 
+    de áreas degradadas. 🌳🌿 
+    Contribuo para um mundo mais verde.
+    Dedico-me a plantar árvores 
+    e contribuir para um futuro mais verde. 💚  
+</pre> -->

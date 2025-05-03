@@ -95,7 +95,7 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     width: 90%;
 }
 
-button:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima dele com o mouse */ 
+#btn-index:hover{ /* usado Pseudo classe no botao para mudar a cor ao passar em cima dele com o mouse */ 
     background-color: rgba(10, 59, 10, 0.925);
 }
 
@@ -374,3 +374,89 @@ tr:nth-child(even), tr:nth-child(odd){
 /* .destaque-itens:nth-child(2){
     align-self: flex-start;
 } */
+
+/*------------------------------------------------------------------------*/
+/*----------------- CSS PAG PERFIL --------------------------------*/
+
+
+#content-perfil{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#content-perfil h2{
+    color: var(--second-color);
+}
+
+#form-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: #85837fa4;
+    border-radius: 0 40px 30%;
+}
+
+#perfil{
+    width: 200px;
+    border-radius: 50px;
+}
+
+.perfil-item{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#label-perfil{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#btn-perfil{
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    opacity: 1;
+}
+
+#btn-edit, #btn-salvar{
+    background-color: var(--primary-color);
+    padding: 8px;
+    border: none;
+}
+#btn-salvar{
+    cursor: auto;
+}
+
+#btn-edit:hover{
+    background-color:  rgb(122, 180, 235);;
+}
+
+#bio-edit{
+    padding: 10px 0  0px;
+    background-color: #85837fa4;
+    display: block; 
+    width: 50%;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px dashed black;
+    cursor: auto;
+    color: #000;
+    resize: none
+    
+}
+
