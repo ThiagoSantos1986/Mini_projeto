@@ -459,7 +459,20 @@ tr:nth-child(even), tr:nth-child(odd){
     border: 1px dashed black;
     cursor: auto;
     color: #000;
-    resize: none
-    
+    resize: none    
+}
+
+/*------------------------------------------------------------------------*/
+/*----------------- CSS PAG FOOTER ---------------------------------------*/
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    margin: 0;
 }
 

@@ -1,4 +1,5 @@
 import { perfil } from './pages.js';
+import { listObjeto } from './bd.js';
 
 perfil();
 
@@ -68,30 +69,3 @@ function createTable(result) {
     }
 }
 
-
-
-const listObjeto = [
-
-    {user: 'PEDRO', especie: 'Ipês', quantidade: 5 },
-    {user: 'ANA', especie: 'Angicos', quantidade: 5 },
-    {user: 'ANA', especie: 'Peroba do Campo', quantidade: 5 },
-    {user: 'THIAGO', especie: 'Ipês', quantidade: 5 },
-    {user: 'THIAGO', especie: 'Angicos', quantidade: 5 },
-    {user: 'ANA', especie: 'Jequitibás', quantidade: 5 },
-    {user: 'ANA', especie: 'Ipês', quantidade: 5 },
-    {user: 'THIAGO', especie: 'Peroba do Campo', quantidade: 5 },
-    {user: 'RAFAEL', especie: 'Ipês', quantidade: 5 },
-    {user: 'RAFAEL', especie: 'Angicos', quantidade: 5 },
-    {user: 'PEDRO', especie: 'Angicos', quantidade: 5 },
-    {user: 'PEDRO', especie: 'Aroeiras', quantidade: 5 },
-    {user: 'PEDRO', especie: 'Peroba do Campo', quantidade: 5 },
-    {user: 'ANA', especie: 'Aroeiras', quantidade: 5 },
-    {user: 'THIAGO', especie: 'Jequitibás', quantidade: 5 },
-    {user: 'RAFAEL', especie: 'Peroba do Campo', quantidade: 5 },
-    {user: 'THIAGO', especie: 'Aroeiras', quantidade: 5 },
-    {user: 'PEDRO', especie: 'Jequitibás', quantidade: 5 },
-    {user: 'RAFAEL', especie: 'Aroeiras', quantidade: 5 },
-    {user: 'RAFAEL', especie: 'Jequitibás', quantidade: 5 },
-]
-
-// createTable()
