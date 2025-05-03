@@ -3,13 +3,13 @@
 
 :root{
     --primary-color: #ffffff;
-    --background-PauBrasil: url('/static/img/pau-brasil1.jpg');
+    --background-PauBrasil: url('/static/img/pauBrasil.jpg');
     --background-Castanheira: url('/static/img/american-elm.jpg');
-    --background-Peroba-rosa: url('/static/img/pink-trees-tg7is0i5q68izq9m.jpg');
+    --background-Peroba-rosa: url('/static/img/perobarosa.jpg');
     --second-color: #000 ;
     --color-menu-defalt:#71c285;
     --color-castanha: #907c45;
-    --color-peroba-rosa:#eb3169;
+    --color-peroba-rosa:#eb5a86;
     --color-pau-brasil:#e43f3ffb;
 }
 /* usado o seletor "body" para estilizar a font e imagen de fundo da pagina, foi zerado o margin  e padding para usar todo espaco da tela.
@@ -176,7 +176,8 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
 }
 
 a[href^="#log"]:hover{
-    color: tomato;
+    color: rgb(247, 16, 16);
+   
 }
 /*------------------------------------------------------------------------*/
 /*----------------- CSS PAG CADASTRO --------------------------------*/
