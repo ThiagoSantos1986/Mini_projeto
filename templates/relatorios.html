@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatorios</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/ed02a7b257.js" crossorigin="anonymous"></script>
 
 </head>
 <body id="back">
@@ -20,34 +21,34 @@
                     <li><a class="color-user" href="#">Relatorios</a></li>
                     <li><a class="color-user" href="/templates/destaques.html">Destaques</a></li>
                     <li><a class="color-user" href="/templates/perfil.html">Perfil</a></li>
-                    <li><a class="color-user" id="logout" href="#log">Logout</a></li>
+                    <li><a class="color-user" id="logout" href="#log"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 </ul>
                 
             </nav>
         </header>
 
         <div id="div-relatorio">
-            <h2 style="color: black; margin-bottom: 0">BUSCAR RELATORIOS</h2>
+            <h2 style="color: black; margin-bottom: 0; text-align:center">BUSCAR RELATORIOS</h2>
             
             <div  id="box-itens">
             
             
-            <label for="user">User:
-                <input type="text" id="user">
-            </label>
-            
-            <label for="Especie">Especie:
-                <input list="especies" name="especie" id="especie" >
-            </label>
-                    <datalist id="especies">
-                     <option value="Ipês" selected>
-                        <option value="Angicos">
-                            <option value="Aroeiras">
-                                <option value="Jequitibás">
-                                    <option value="Peroba do Campo">
-                                    </datalist>
-            
-            <button type="button" id="search">Pesquisar</button>
+                <label for="user">User:
+                    <input type="text" id="user">
+                </label>
+                
+                <label for="Especie">Especie:
+                    <input list="especies" name="especie" id="especie" >
+                </label>
+                        <datalist id="especies">
+                        <option value="Ipês" selected>
+                            <option value="Angicos">
+                                <option value="Aroeiras">
+                                    <option value="Jequitibás">
+                                        <option value="Peroba do Campo">
+                                        </datalist>
+                
+            <button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i> Procurar</button>
             </div>
 
             <div id="div-table">

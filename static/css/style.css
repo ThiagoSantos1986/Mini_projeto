@@ -50,8 +50,7 @@ h2{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    /* opacity: ; */
-    /* z-index: -1; */
+    
 }
 
 label{  /* usado seletor de tipo "label"  para dar um destaque no  corpo da letra "negrito" e colocado uma margin para alinhar os inputs de cada label. */
@@ -131,24 +130,24 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
 }
 #logo{
     width: 20%;
-    align-self: center;
+    align-self: center; 
     text-align: center;
     margin: 0;
-    
+    margin-bottom: 5px;
 }
 
 #logo a{
     font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
-    font-weight: 400;
-
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 #menu-content ul{
-    width: 60%;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -157,8 +156,9 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
 #menu-content ul li {
     list-style: none;
     display: block;
-    padding: 25px 15px;
+    padding: 20px 15px;
     transition: background-color 0.3s ease, transform 0.3s ease; 
+    text-transform: uppercase;
 }
 
 #menu-content ul li:hover {
@@ -167,7 +167,7 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
 }
 
 .color-user {
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     letter-spacing: 0.6px;
     font-size: 18px;
@@ -183,24 +183,30 @@ a[href^="#log"]:hover{
 /*----------------- CSS PAG CADASTRO --------------------------------*/
 
 #form-cadastro{
-    margin-top: 60px;
     padding: 15px;
-    width: 400px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: auto;
     color: var(--second-color);
     border: 1px solid black;
     background-color: #85837fbd;
     border-radius: 8px;
+}
+#btn-cadastro{
+    display: flex;
+    justify-content: space-evenly;
 
 }
+#btn-submit:hover {
+    background-color: tomato;
+}
+
 
 #form-cadastro button{
-    display: inline;
-    width: 90%;
-    margin: 10px;
+    width: 40%;
+    margin: 10px 0; 
     border: none;
 }
 #add:hover{
@@ -214,14 +220,12 @@ a[href^="#log"]:hover{
     font-weight: bold; 
     letter-spacing: 0.3;
     color: #0c0b0b;
-   
-    
 }
 
 #form-cadastro input{
     padding: 5px;
     width: 60%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-radius: 10px;
     border: none;
     align-self: center;    
@@ -242,16 +246,15 @@ a[href^="#log"]:hover{
     width: 70%;
     color: var(--second-color);
     margin-top: 20px;
-    z-index: 1;
     overflow-y: auto;
-    height: 200px;
-    
+    height: auto;
+    max-height: 180px;
 }
 table {
     display: none;
     border-collapse: collapse;
     width: 100%; 
-    font-size: 18px;
+    font-size: 16px;
   }
   
   th, td {
@@ -273,7 +276,7 @@ tr:nth-child(even), tr:nth-child(odd){
     background-color: rgba(61, 153, 88, 0.822);
   }
 /*------------------------------------------------------------------------*/
-/*----------------- CSS PAG RELATORIOS -------------------------------------*/
+/*----------------- CSS PAG RELATORIOS ------------------------------------*/
 
 #div-relatorio{
    display: flex;
@@ -281,14 +284,12 @@ tr:nth-child(even), tr:nth-child(odd){
    align-items: center;
    height: 100vh;
    flex-direction: column;
-  
-   
 }
 
 #box-itens{
-    padding: 10px;
+    padding: 8px;
     display: flex;
-    width:  300px;
+    width:  280px;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
@@ -312,6 +313,8 @@ tr:nth-child(even), tr:nth-child(odd){
     align-self: center;
     width: 90%;
     margin: 15px;
+    border: none;
+    /* cursor: pointer; */
     
 }
 #box-itens  label{
@@ -341,6 +344,7 @@ tr:nth-child(even), tr:nth-child(odd){
 #flex-item-destaque{
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
     width: 100%;
     height: 50vh;
     align-items: center;
@@ -358,23 +362,17 @@ tr:nth-child(even), tr:nth-child(odd){
 }
 .destaque-itens img{
     width: 200px;
-    height: 180px;
     border-radius: 15px;
     background-size: cover;
 }
 
 .destaque-itens h3{
-    
     font-family: sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 30px;
     width: 100%;
 }
-
-/* .destaque-itens:nth-child(2){
-    align-self: flex-start;
-} */
 
 /*------------------------------------------------------------------------*/
 /*----------------- CSS PAG PERFIL --------------------------------*/
@@ -394,26 +392,27 @@ tr:nth-child(even), tr:nth-child(odd){
 #form-perfil{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 18px;
     gap: 30px;
-    padding: 25px;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: auto;
     border: 2px solid black;
     background-color: #85837fa4;
     border-radius: 0 40px 30%;
 }
 
 #perfil{
-    width: 200px;
-    height: 180px;
+    width: 180px;
+    height: 170px;
     border-radius: 50px;
 }
 
 .perfil-item{
     display: flex;
     width: 100%;
-    height: 400px;
-    justify-content: space-evenly;
+    height: auto;
+    justify-content: space-between;
     align-items: center;
 }
 #label-perfil{
@@ -421,8 +420,8 @@ tr:nth-child(even), tr:nth-child(odd){
     width: 50%;
     height: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 16px;
+    justify-content: space-around ;
+    font-size: 18px;
 }
 
 #btn-perfil{
@@ -474,5 +473,75 @@ footer{
     background-color: var(--second-color);
     color: var(--primary-color);
     margin: 0;
+    height: auto;
 }
 
+
+
+@media  screen and (max-width: 950px){
+
+    #container{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    #menu-content{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #menu-content ul{
+        
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    #menu-content ul li{
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        font-size: 14px;
+    }
+    #logo{
+        width: 80%;
+    }    
+
+    #menu-content ul li:hover{
+        border-bottom: 2px solid black;
+    }
+    #form-cadastro{
+        width: 220px;
+    }
+    #box-itens{
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    .destaque-itens img{
+        flex-basis: 160px;
+    }
+    .perfil-item{
+        flex-direction: column;
+    }
+    #btn-perfil{
+        flex-direction: row;
+        align-content: space-evenly;
+        width: 100%;
+    }
+    #bio-edit{
+        width: 70%;
+    }
+    #label-perfil{
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    #perfil{
+        width: 200px;
+    }
+    #form-perfil{
+        width: 300px;
+        gap: 5px;
+    }
+}
