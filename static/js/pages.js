@@ -1,7 +1,6 @@
 const backgroud = document.getElementById('back')
 const logout = document.getElementById('logout')
 const logo = document.getElementById('link-logo')
-// const add = document.getElementById('add')
 const menuBackground = document.getElementById('menu-content')
 
 perfil()
@@ -33,7 +32,14 @@ export function perfil(){
 
 }
 
+$(document).ready(()=>{
 
+   $('.nav-toggle').on('click', () =>{
+        $('#menu-content ul').slideToggle("medium")
+   });
+
+
+});
 
 logout.addEventListener('click', () => {
     

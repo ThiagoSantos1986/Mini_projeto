@@ -22,7 +22,7 @@
 }
 
 h1{
-    margin-bottom: 0;
+    margin: 5px 0;
     color: var(--second-color);
 }
 h2{
@@ -121,7 +121,6 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     flex-direction: row;
     justify-content:space-between;
     width: 100%;
-    /* background-color: var(--color-menu-defalt); */
     position: fixed;
     top: 0;
     left: 0;
@@ -133,7 +132,7 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     align-self: center; 
     text-align: center;
     margin: 0;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 #logo a{
@@ -142,6 +141,12 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     letter-spacing: 2px;
     font-weight: 200;
     text-transform: uppercase;
+}
+#menu-content .nav-toggle{
+    /* float: right; */
+    cursor: pointer;
+    font-size: 25px;
+
 }
 
 #menu-content ul{
@@ -478,7 +483,7 @@ footer{
 
 
 
-@media  screen and (max-width: 950px){
+@media (max-width: 950px){
 
     #container{
         max-width: 90%;
@@ -491,11 +496,9 @@ footer{
         flex-wrap: wrap;
     }
     #menu-content ul{
-        
         align-items: flex-start;
         flex-direction: column;
         width: 100%;
-        
     }
     #menu-content ul li{
         padding: 10px;
@@ -504,7 +507,16 @@ footer{
         font-size: 14px;
     }
     #logo{
-        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin: 5px;
+    }
+    
+    #logo .nav-toggle{
+        width: 10%;
+        align-self: center;
     }    
 
     #menu-content ul li:hover{
@@ -544,4 +556,12 @@ footer{
         width: 300px;
         gap: 5px;
     }
+
 }
+
+@media (min-width: 1030px){
+    #menu-content .nav-toggle{
+        display: none;
+    }
+}
+
