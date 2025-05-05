@@ -482,8 +482,7 @@ footer{
 }
 
 
-
-@media (max-width: 950px){
+@media (max-width: 1040px){
 
     #container{
         max-width: 90%;
@@ -496,6 +495,10 @@ footer{
         flex-wrap: wrap;
     }
     #menu-content ul{
+        /* top: 60px;
+        left: 0;
+        right: 0;
+        position: absolute; */
         align-items: flex-start;
         flex-direction: column;
         width: 100%;
@@ -515,6 +518,7 @@ footer{
     }
     
     #logo .nav-toggle{
+        display: block;
         width: 10%;
         align-self: center;
     }    
@@ -535,22 +539,29 @@ footer{
     }
     .perfil-item{
         flex-direction: column;
+        justify-content: center;
     }
     #btn-perfil{
         flex-direction: row;
-        align-content: space-evenly;
+        align-content: center;
         width: 100%;
+        height: auto;
+        margin: 5px  0;
+
     }
     #bio-edit{
-        width: 70%;
+        width: 60%;
+        height: 80px;
+
     }
     #label-perfil{
         justify-content: center;
         width: 100%;
+        height: auto;
         align-items: center;
     }
     #perfil{
-        width: 200px;
+        width: 150px;
     }
     #form-perfil{
         width: 300px;

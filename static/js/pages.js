@@ -8,6 +8,7 @@ perfil()
 export function perfil(){
     
     const perfil  = localStorage.getItem('perfil')
+   
 
     switch (perfil){
         
@@ -32,14 +33,24 @@ export function perfil(){
 
 }
 
+    
 $(document).ready(()=>{
 
-   $('.nav-toggle').on('click', () =>{
-        $('#menu-content ul').slideToggle("medium")
-   });
-
-
+    $('.nav-toggle').on('click', () =>{
+            $('#menu-content ul').slideToggle("medium")
+    });
+    $(window).on('resize', () => {
+        if ($(window).width() > 1050) { 
+            $('#menu-content ul').show(); 
+        } else {
+            $('#menu-content ul').hide(); 
+        }
+    });
 });
+
+
+
+
 
 logout.addEventListener('click', () => {
     
