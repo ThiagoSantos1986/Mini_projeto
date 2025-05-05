@@ -2,14 +2,16 @@ const backgroud = document.getElementById('back')
 const logout = document.getElementById('logout')
 const logo = document.getElementById('link-logo')
 const menuBackground = document.getElementById('menu-content')
+const logoPerfil = document.getElementById('span-user')
+
 
 perfil()
 
 export function perfil(){
     
     const perfil  = localStorage.getItem('perfil')
-   
-
+    
+    
     switch (perfil){
         
         case 'Castanheira':
@@ -18,7 +20,7 @@ export function perfil(){
             logo.textContent = 'Castanheira'
             break
 
-        case 'Peroba-Rosa':
+            case 'Peroba-Rosa':
             backgroud.style.backgroundImage = 'var(--background-Peroba-rosa)'         
             menuBackground.style.backgroundColor = 'var(--color-peroba-rosa )'
             logo.textContent = 'Peroba-Rosa'
@@ -28,14 +30,15 @@ export function perfil(){
             backgroud.style.backgroundImage = 'var(--background-PauBrasil)'
             menuBackground.style.backgroundColor = 'var(--color-pau-brasil)'
             logo.textContent = 'Pau-Brasil'
-                
+            
     }
-
+    
 }
 
-    
-$(document).ready(()=>{
 
+$(document).ready(()=>{
+    
+    logoPerfil.innerText = localStorage.getItem('user').toUpperCase()
     $('.nav-toggle').on('click', () =>{
             $('#menu-content ul').slideToggle("medium")
     });
@@ -47,8 +50,6 @@ $(document).ready(()=>{
         }
     });
 });
-
-
 
 
 

@@ -261,7 +261,6 @@ table {
     width: 100%; 
     font-size: 16px;
   }
-  
   th, td {
     padding: 8px;
     text-align: center;
@@ -279,6 +278,7 @@ tr:nth-child(even), tr:nth-child(odd){
 
  th:nth-child(even), th:nth-child(odd) {
     background-color: rgba(61, 153, 88, 0.822);
+    
   }
 /*------------------------------------------------------------------------*/
 /*----------------- CSS PAG RELATORIOS ------------------------------------*/
@@ -364,6 +364,9 @@ tr:nth-child(even), tr:nth-child(odd){
     background-color: #85837fa4 ;
     border: 2px solid black;
     border-radius: 15px;
+}
+.destaque-itens:hover{
+    border: 1px solid rgb(83, 197, 83);
 }
 .destaque-itens img{
     width: 200px;
@@ -493,7 +496,7 @@ footer{
     font-weight: 200;
 
 }
-.footer-item a:hover, p:hover{
+.footer-item a:hover, .footer-item p:hover{
     color: #71c285;
 }
 
@@ -532,14 +535,39 @@ footer{
 #social-itens a:nth-child(3){
     color: rgb(46, 163, 231);
 }
+/*------------------------------------------------------------------------*/
+/*----------------- CSS ICONE USER---------------------------------------*/
 
+#icone-user{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+    color: rgb(15, 15, 15);
+    font-weight: 400;
+    background-color: #85837fa4; 
+}
+
+#icone-home{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+/*----------------- CSS ICONE  RESPONSIVE ---------------------------------------*/
 
 @media (max-width: 1040px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
 
     #container{
-        max-width: 90%;
         margin: 0 auto;
-        padding: 0;
+        padding: 10px;
+       
     }
     
     #menu-content{

@@ -9,6 +9,7 @@ const imagePerfil = document.getElementById('perfil')
 const nomePerfil = document.getElementById('nome-perfil')
 const quantidade = document.getElementById('quantidade')
 
+
 // const listaNomesQuantidadeTotal = []
 // const nomes = []
 
