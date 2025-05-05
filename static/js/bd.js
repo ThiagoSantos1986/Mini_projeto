@@ -28,7 +28,7 @@ export const listObjeto = [
     {user: 'RAFAEL', especie: 'Peroba do Campo', quantidade: 300 },
     {user: 'THIAGO', especie: 'Aroeiras', quantidade: 90 },
     {user: 'PEDRO', especie: 'Jequitibás', quantidade: 15 },
-    {user: 'RAFAEL', especie: 'Aroeiras', quantidade: 300 },
+    {user: 'RAFAEL', especie: 'Aroeiras', quantidade: 100 },
     {user: 'RAFAEL', especie: 'Jequitibás', quantidade: 10 },
 ]
 

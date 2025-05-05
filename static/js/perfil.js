@@ -10,15 +10,11 @@ const nomePerfil = document.getElementById('nome-perfil')
 const quantidade = document.getElementById('quantidade')
 
 
-// const listaNomesQuantidadeTotal = []
-// const nomes = []
-
 
 btnEdit.addEventListener('click', () => {
     bioEdit.style.border  = "2px solid green"
     bioEdit.disabled = false
     btnSalvar.disabled = false
-    
     bioEdit.innerText =  bioEdit.value
 
     
@@ -65,7 +61,9 @@ const result = listUser.filter((nome) => nome.user.split(' ')[0] === nomeUser)
         
         const nomeCompleto = element.user
        
-        nomePerfil.innerText = nomeCompleto   
+        nomePerfil.innerText = nomeCompleto  
+        
+        bioEdit.innerText = element.Bio 
     }
     
 
@@ -74,21 +72,20 @@ const result = listUser.filter((nome) => nome.user.split(' ')[0] === nomeUser)
 
 let total = quantidadeTotal
     
-if(total > 1500){
+if(total > 700){
 
     let result = listAvatar.filter((nome) => nome.avatar === "madura")
     
     imagePerfil.setAttribute('src', result[0].path )
-}else if (total < 1500 && total > 700){
+}else if (total <= 700 && total > 301){
 
     let result = listAvatar.filter((nome) => nome.avatar === "jovem")
     imagePerfil.setAttribute('src', result[0].path )
 
-}else if (total <= 700 && total > 300){
+}else if (total <= 300 && total > 101){
 
     let result = listAvatar.filter((nome) => nome.avatar === "broto")
     imagePerfil.setAttribute('src', result[0].path )
-    // document.getElementById('avatar').innerText = result[0].avatar
 
 }else{
 

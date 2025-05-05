@@ -66,24 +66,23 @@ for(let i = 0 ; i<= 2; i++){
 
     let total = listaNomesQuantidadeTotal[i].total
     
-    if(total > 1500){
+    if(total > 700){
 
         let result = listAvatar.filter((nome) => nome.avatar === "madura")
         
         imagesBox[i].setAttribute('src', result[0].path )
-    }else if (total < 1500 && total > 700){
+    }else if (total <= 700 && total > 301){
     
         let result = listAvatar.filter((nome) => nome.avatar === "jovem")
         imagesBox[i].setAttribute('src', result[0].path )
 
-    }else if (total <= 700 && total > 300){
+    }else if (total <= 300 && total > 101){
     
         let result = listAvatar.filter((nome) => nome.avatar === "broto")
         imagesBox[i].setAttribute('src', result[0].path )
         document.getElementById('avatar').innerText = result[0].avatar
 
     }else{
-
         let result = listAvatar.filter((nome) => nome.avatar === "plantada")
         imagesBox[i].setAttribute('src', result[0].path )
         // document.getElementById('avatar').textContent = result[0].avatar  //se quiser colocar qual avatar esta.
