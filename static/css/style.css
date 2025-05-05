@@ -115,6 +115,8 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
     height: 300px; 
     
 }
+/*------------------------------------------------------------------------*/
+/*----------------- CSS MENU --------------------------------*/
 
 #menu-content{
     display: flex;
@@ -181,7 +183,7 @@ button{ /* seletor de tipo  para estilizaçao do botao "ENVIAR"
 }
 
 a[href^="#log"]:hover{
-    color: rgb(247, 16, 16);
+    color: rgb(185, 3, 3);
    
 }
 /*------------------------------------------------------------------------*/
@@ -450,6 +452,10 @@ tr:nth-child(even), tr:nth-child(odd){
 #btn-salvar{
     cursor: auto;
 }
+#btn-salvar:hover:enabled{
+    cursor: pointer;
+    background-color: tomato;
+}
 
 #btn-edit:hover{
     background-color:  rgb(122, 180, 235);;
@@ -490,6 +496,9 @@ footer{
     align-items: baseline;
     height: 100%;
 } 
+footer h3{
+    margin: 7px 0 5px;
+}
 .footer-item a{
     text-decoration: none;
     color: #f1f1f1;
@@ -500,17 +509,16 @@ footer{
     color: #71c285;
 }
 
-
 #container-footer  h3 {
-    margin: 10px 0 ;
+    margin: 8px 0 5px;
     font-weight: 300;
-    
+    color: #504e4d;    
 }
 .footer-item{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 8px;
 }
 .footer-item p{
     margin: 0;
