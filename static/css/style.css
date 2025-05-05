@@ -488,6 +488,7 @@ footer{
     color: var(--primary-color);
     margin: 0;
     height: auto;
+    opacity: 0.8;
 }
 #container-footer{
     display: flex;
